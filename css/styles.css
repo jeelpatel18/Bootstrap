@@ -14,21 +14,22 @@
 {
     margin: 0px auto;
     padding: 20px 0px 20px 0px;
-    background-color: pink;
+    background-color:#D1C4E9;
 
 }
 
 .jumbotron
 {
-    background-color:lightseagreen;
+    background-color:#9575CD;
     margin: 0px auto;
     padding: 70px 30px 70px 30px;
-    color:purple;
+    color:floralwhite;
 }
 
 .address
 {
     font-size: 20px;
     margin: 0px;
+    color:#0f0f0f;
 
 }

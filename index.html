@@ -36,9 +36,58 @@
                     <li class="nav-item"><a class="nav-link" href="./contactus.html"><span class="fa fa-address-card fa-lg"></span>
                             Contact</a></li>
                 </ul>
+                <span class="navbar-text">
+                    <a data-toggle="modal" data-target="#loginModal">
+                        <span class="fa fa-sign-in"></span> Login
+                    </a>
+                </span>
             </div>
         </div>
     </nav>
+
+    <!-- Adding a Modal here -->
+    <div id="loginModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="content">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Login</h4>
+                    <button type="button" class="close" data-dismiss="modal"> &times;</button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col-sm-4">
+                                <label for="loginEmail" class="sr-only">
+                                    Email
+                                </label>
+                                <input type="email" class="form-control form-control-sm mr-1" id="loginEmail"
+                                    placeholder="Enter Email">
+                            </div>
+                            <div class="form-group col-sm-4">
+                                <label for="loginPassword" class="sr-only">
+                                    Password
+                                </label>
+                                <input type="password" class="form-control form-control-sm mr-1" id="loginPassword"
+                                    placeholder="Enter Password">
+                            </div>
+                            <div class="col-sm-auto">
+                                <div class="form-check">
+                                    <input type="checkbox" class="form-check-input">
+                                    <label class="form-check-label">
+                                        <strong>Rememeber me</strong>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                                <button type="button" class="btn btn-secondary btn-sm ml-auto" data-dismiss="modal">Cancel</button>
+                                <button type="submit" class="btn btn-primary btn-sm ml-1">Sign in</button> 
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <header class="jumbotron">
         <div class="container">
@@ -54,7 +103,9 @@
                 </div>
                 <!-- A2 - Task - 3 -->
                 <div class="col-12 col-sm-3 align-self-center">
-                    <a class="btn btn-block btn-warning" role="button" href="#Reserve">Reserve Table</a>
+                    <!-- we will add tooltip here for Button -->
+                    <a class="btn btn-block btn-warning text-white" data-toggle="tooltip" data-html="true" title="or Call us at <br> <strong>+91 1234567890</strong>"
+                        data-placement="bottom" role="button" href="#Reserve">Reserve Table</a>
                 </div>
             </div>
         </div>
@@ -242,7 +293,12 @@
     <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-
+    <!-- Added a java script code for Tooltip -->
+    <script>
+        $(document).ready(function () {
+            $('[data-toggle="tooltip"]').tooltip();
+        });
+    </script>
 </body>
 
 </html>

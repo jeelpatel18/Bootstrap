@@ -37,7 +37,12 @@
                             Contact</a></li>
                 </ul>
                 <span class="navbar-text">
-                    <a data-toggle="modal" data-target="#loginModal">
+                    <!-- <a data-toggle="modal" data-target="#loginModal" id="loginCode">
+                        <span class="fa fa-sign-in"></span> Login
+                    </a> -->
+                    
+                    <!-- A4 - task 1 (data-* attributes removed) -->
+                    <a id="loginCode">
                         <span class="fa fa-sign-in"></span> Login
                     </a>
                 </span>
@@ -90,7 +95,7 @@
     </div>
 
     <!-- Reserve Table Modal -->
-    <!-- A3-Task 1 -->
+  
     <div id="reserveModal" class="modal fade" role="dialog">
             <div class="modal-dialog modal-lg" role="content">
                 <div class="modal-content">
@@ -136,7 +141,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <!-- A3-Task 2 -->
+                                    
                                     <div class="form-group row">
                                         <label for="section" class="col-form-label col-md-2">Section</label>
             
@@ -192,9 +197,18 @@
                 </div>
                 
                 <!-- A3-Task 3 Tooltip removed and Reserve table Modal dialog in opening -->
-                <div class="col-12 col-sm-3 align-self-center">
-                    <a class="btn btn-block btn-warning text-white"
+                <!-- <div class="col-12 col-sm-3 align-self-center">
+                    <a class="btn btn-block btn-warning text-white" id="reserveCode"
                      role="button" data-toggle="modal" data-target="#reserveModal">Reserve Table</a>
+                </div> -->
+
+
+
+
+                <!-- A4 - task 1 (data-* attributes removed) -->
+                <div class="col-12 col-sm-3 align-self-center">
+                    <a class="btn btn-block btn-warning text-white" id="reserveCode"
+                     role="button">Reserve Table</a>
                 </div>
             </div>
         </div>
@@ -367,7 +381,7 @@
                         <i class="fa fa-fax fa-lg"></i> : +852 8765 4321<br>
                         <i class="fa fa-envelope fa-lg"></i> : <a href="mailto:confusion@food.net">confusion@food.net</a>
                     </address>
-                </div>
+                </div> 
                 <div class="col-12 col-sm-4 align-self-center">
                     <!-- Content in this div tag , for extra small screen -- Content will occupy 1 row "Separate 12 columns" stacked below upper div's content
                     and for small to XL --- content will occupy 4 rows -->
@@ -414,6 +428,17 @@
                     $("#carouselButton").children("span").removeClass('fa-play');
                     $("#carouselButton").children("span").addClass('fa-pause');                    
                 }
+            });
+
+            // A4 - Task - 3
+
+            $("#loginCode").click(function() {
+                $('#loginModal').modal('toggle');
+            });
+
+            // A4 - Task - 2
+            $("#reserveCode").click(function() {
+                $('#reserveModal').modal('toggle');
             });
             
         });

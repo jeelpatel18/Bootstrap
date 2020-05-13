@@ -414,7 +414,11 @@
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
     
     <!-- JQuerry code for pause/play buttons of carousel -->
-    <script>
+
+
+
+    <!-- Moving JS code to another seperate file then we include it in this file -->
+     <script>
         $(document).ready(function() {
             $('#mycarousel').carousel({interval:500});
             $("#carouselButton").click(function(){
@@ -442,7 +446,7 @@
             });
             
         });
-    </script>
+    </script> 
    
 </body>
 
